@@ -1,0 +1,22 @@
+/*****INDHOLDSFORTEGNELSE*****/
+
+
+/*****GENERELLE INDSTLLINGER*****/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: #1D2B3B;
+}

@@ -6,14 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niki Wacherhausen // Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <img id="logo" src="assets/kea_white_logo.svg" alt="KEA's logo">
+        <nav role='navigation'>
+            <div id="menuToggle">
+                <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+                <input type="checkbox" />
+
+                <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <a href="#">
+                        <li>Forside</li>
+                    </a>
+                    <a href="#">
+                        <li>Om mig</li>
+                    </a>
+                    <a href="#">
+                        <li>Grundlæggende Web</li>
+                    </a>
+                    <a href="#">
+                        <li>Grundlæggende Animation</li>
+                    </a>
+                    <a href="#">
+                        <li>Grundlæggende Indhold</li>
+                    </a>
+                    <a href="#">
+                        <li>Grundlæggende UX</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
     </header>
+    <section id="landingpage">
+        <h1 id="niki_mobile">NIKI</h1>
+        <h1 id="wacher_mobile">WACHER</h1>
+        <h1 id="hausen_mobile">HAUSEN</h1>
+        <h1 id="niki_desktop">NIKI</h1>
+        <h1 id="wacherhausen_desktop">WACHERHAUSEN</h1>
+        <h2 id="portfolio_splash">PORTFOLIO</h2>
+        <section id="splash" class="scale_splash">
+        </section>
+    </section>
+    <section id="about_me">
+        <h1 id="om_mig_site">OM MIG</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint placeat dolorum possimus ut sed omnis autem delectus repudiandae deserunt similique voluptatum commodi itaque illum, adipisci impedit repellat quod mollitia earum!</p>
+    </section>
+    <section id="portfolio_site">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto ipsum mollitia, officiis. Minus pariatur eos delectus praesentium, eveniet, repudiandae consectetur accusamus est, quos saepe cumque accusantium explicabo neque nostrum doloremque.</p>
+    </section>
 
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>

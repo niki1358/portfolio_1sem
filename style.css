@@ -10,6 +10,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 
 }
 
@@ -19,4 +20,392 @@ img {
 
 body {
     background-color: #1D2B3B;
+    overflow-x: hidden;
+}
+
+#landingpage {
+    position: relative;
+
+}
+
+p {
+    color: white;
+}
+
+
+/*****BURGER MENU*****/
+
+a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+}
+
+/*
+a:hover {
+    color: tomato;
+}
+*/
+
+#menuToggle {
+    display: block;
+    position: absolute;
+    top: 760px;
+    right: 30px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/*Selve hamburgeren*/
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: ghostwhite;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/*Her laver jeg burger-menuen til et kryds*/
+#menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #242941;
+}
+
+/*Jeg gemmer den midterste streg*/
+#menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*Her ændrer jeg retningen på den anden streg*/
+#menuToggle input:checked ~ span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    width: 375px;
+    margin: 0 0 0 0;
+    padding: 20px 20px 0 20px;
+    right: -100px;
+    top: -305px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 0 0 26px 0;
+    font-size: 22px;
+    font-family: 'Open Sans', 'sans serif';
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul {
+    transform: scale(1.0, 1.0);
+    opacity: 1;
+}
+
+/*****LANDING PAGE*****/
+#niki_mobile {
+    font-family: 'Archivo Black', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    top: 3vw;
+    left: 2vw;
+    font-size: 7rem;
+    position: absolute;
+}
+
+#wacher_mobile {
+    font-family: 'Archivo Black', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    top: 20vw;
+    left: 2vw;
+    font-size: 7rem;
+    position: absolute;
+}
+
+#hausen_mobile {
+    font-family: 'Archivo Black', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    top: 37vw;
+    left: 2vw;
+    font-size: 7rem;
+    position: absolute;
+}
+
+#niki_desktop {
+    visibility: hidden;
+    position: absolute;
+}
+
+#wacherhausen_desktop {
+    visibility: hidden;
+    position: absolute;
+}
+
+#splash {
+    background-image: url(assets/niki_splash_gradient.png);
+    height: 812px;
+    background-size: cover;
+    background-position: center;
+}
+
+#portfolio_splash {
+    visibility: hidden;
+    position: absolute;
+}
+
+
+/*****ABOUT ME*****/
+
+#about_me {}
+
+#om_mig_site {
+    font-family: 'Archivo Black', sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px ghostwhite;
+    font-size: 6rem;
+    text-align: center;
+
+
+
+}
+
+@media only screen and (min-width: 800px) {
+
+a:hover {
+    color: #925c6f;
+}
+
+
+#menuToggle {
+    display: block;
+    position: absolute;
+    top: 812px;
+    right: 30px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/*Selve hamburgeren*/
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: ghostwhite;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    position: absolute;
+    width: 425px;
+    margin: 0 0 0 0;
+    padding: 20px 20px 0 20px;
+    right: -100px;
+    top: -305px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+
+
+    #landingpage {
+        position: relative;
+        height: 100vh;
+    }
+
+    #splash {
+        background-image: url(assets/niki_splash_gradient.png);
+        position: absolute;
+        background-size: 100%;
+        width: 400px;
+        height: 600px;
+        top: 9vw;
+        left: 55vw;
+        background-repeat: no-repeat;
+
+    }
+
+    #splash:hover {
+        background-image: url(assets/niki_splash_farve.jpg);
+        position: absolute;
+        background-size: 100%;
+        width: 400px;
+        height: 600px;
+        top: 9vw;
+        left: 55vw;
+        background-repeat: no-repeat;
+        animation: pulse 0.2s infinite;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(1.1);
+        }
+    }
+
+    #niki_mobile {
+        visibility: hidden;
+    }
+
+    #wacher_mobile {
+        visibility: hidden;
+    }
+
+    #hausen_mobile {
+        visibility: hidden;
+    }
+
+    #niki_desktop {
+        visibility: visible;
+        font-family: 'Archivo Black', sans-serif;
+        color: ghostwhite;
+        top: 20vw;
+        left: 21vw;
+        font-size: 7rem;
+        position: absolute;
+    }
+
+    #wacherhausen_desktop {
+        visibility: visible;
+        font-family: 'Archivo Black', sans-serif;
+        color: transparent;
+        -webkit-text-stroke: 1px ghostwhite;
+        top: 25vw;
+        left: 21vw;
+        font-size: 7rem;
+        position: absolute;
+        z-index: 2;
+    }
+
+    #portfolio_splash {
+        visibility: visible;
+        font-family: 'Heebo', sans-serif;
+        color: ghostwhite;
+        top: 45vw;
+        left: 7vw;
+        font-size: 2rem;
+        position: absolute;
+    }
 }

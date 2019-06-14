@@ -30,6 +30,28 @@ body {
 
 p {
     color: white;
+    font-size: 15px;
+    padding: 15px 15px 15px 15px;
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h2 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: ghostwhite;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+h3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: ghostwhite;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 10px 0 0 0;
 }
 
 
@@ -42,16 +64,10 @@ a {
     transition: color 0.3s ease;
 }
 
-/*
-a:hover {
-    color: tomato;
-}
-*/
-
 #menuToggle {
     display: block;
     position: absolute;
-    top: 760px;
+    top: 90vh;
     right: 30px;
 
     z-index: 1;
@@ -125,17 +141,14 @@ a:hover {
     transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
+
 #menu {
-    position: absolute;
+    position: fixed;
     width: 375px;
     margin: 0 0 0 0;
     padding: 20px 20px 0 20px;
-    right: -100px;
-    top: -305px;
+    right: 0;
+    bottom: 0;
 
     background: #ededed;
     list-style-type: none;
@@ -146,6 +159,7 @@ a:hover {
     transform: translate(100%, 0);
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    /*    display: none;*/
 }
 
 #menu li {
@@ -154,9 +168,7 @@ a:hover {
     font-family: 'Open Sans', 'sans serif';
 }
 
-/*
- * And let's fade it in from the left
- */
+/*Fade ind */
 #menuToggle input:checked ~ ul {
     transform: scale(1.0, 1.0);
     opacity: 1;
@@ -204,7 +216,7 @@ a:hover {
 }
 
 #splash {
-    background-image: url(assets/niki_splash_gradient.png);
+    background-image: url(assets/Niki-17-2.jpg);
     height: 812px;
     background-size: cover;
     background-position: center;
@@ -218,107 +230,186 @@ a:hover {
 
 /*****ABOUT ME*****/
 
-#about_me {}
-
-#om_mig_site {
-    font-family: 'Archivo Black', sans-serif;
-    color: transparent;
-    -webkit-text-stroke: 1px ghostwhite;
-    font-size: 6rem;
-    text-align: center;
-
-
-
+#om_mig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+
+#billede_profil {
+    display: flex;
+    justify-content: center;
+}
+
+#profilbillede {
+    width: 40%;
+    height: 40%;
+}
+
+#box {
+    background-color: rgb(248, 248, 255);
+    padding: 15px 10px 20px;
+    position: relative;
+    width: 450px;
+    margin: 10px;
+}
+
+#box.lille {
+    overflow: hidden;
+    max-height: 150px;
+    transition: max-height 0.5s ease-out;
+}
+
+#box.stor {
+    max-height: 3000px;
+    transition: max-height 1s ease-in;
+}
+
+/*Laver indhold vha CSS*/
+#box.lille span:after {
+    content: "+";
+}
+
+#box.stor span:after {
+    content: "-";
+}
+
+#mere .plus {
+    /** For at få den nærmere på bunden **/
+    margin-top: 40px;
+
+    /** For at undgå, at den opfører sig som et blockelement, og fylder hele bredden - så sikrer jeg mig, at jeg kan bruge parent text-align **/
+    display: inline-block;
+
+    /* Selve plussets farve og størrelse, samt baggrund */
+    color: red;
+    font-weight: 800;
+    width: 20px;
+    height: 20px;
+    background: white;
+}
+
+.gult_overlay {
+    /* For at få gradient-baggrunden til at fylde */
+    height: 60px;
+    margin: 0;
+
+    /* For at placere gradientbaggrunden i bunden */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* For at sikre, at den fylder hele sin parent ud i bredden */
+    width: 100%;
+
+    /* Selve gradienten */
+    background: linear-gradient(rgba(255, 210, 0, 0), rgb(255, 255, 255));
+
+    /* For at placere plusset i midten */
+    text-align: center;
+}
+
+#box p {
+    color: #242941;
+}
+
+#box h3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 10px 0 0 0;
+    color: #242941;
+}
+
 
 @media only screen and (min-width: 800px) {
 
-a:hover {
-    color: #925c6f;
-}
+    a:hover {
+        color: #925c6f;
+        text-decoration: line-through;
+        text-decoration-color: #232323;
+
+    }
 
 
-#menuToggle {
-    display: block;
-    position: absolute;
-    top: 812px;
-    right: 30px;
+    #menuToggle {
+        display: block;
+        position: absolute;
+        top: 90vh;
+        right: 50px;
+        position: fixed;
 
-    z-index: 1;
+        z-index: 1;
 
-    -webkit-user-select: none;
-    user-select: none;
-}
+        -webkit-user-select: none;
+        user-select: none;
+    }
 
-#menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
 
-    cursor: pointer;
+        cursor: pointer;
 
-    opacity: 0;
-    /* hide this */
-    z-index: 2;
-    /* and place it over the hamburger */
+        opacity: 0;
+        z-index: 2;
 
-    -webkit-touch-callout: none;
-}
+        -webkit-touch-callout: none;
+    }
 
-/*Selve hamburgeren*/
-#menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
+    /*Selve hamburgeren*/
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
 
-    background: ghostwhite;
-    border-radius: 3px;
+        background: ghostwhite;
+        border-radius: 3px;
 
-    z-index: 1;
+        z-index: 1;
 
-    transform-origin: 4px 0px;
+        transform-origin: 4px 0px;
 
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-        opacity 0.55s ease;
-}
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
 
-#menuToggle span:first-child {
-    transform-origin: 0% 0%;
-}
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
 
-#menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-}
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
 
+    #menu {
+        position: fixed;
+        width: 425px;
+        margin: 0 0 0 0;
+        padding: 20px 20px 0 20px;
+        right: 0;
+        bottom: 0;
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu {
-    position: absolute;
-    width: 425px;
-    margin: 0 0 0 0;
-    padding: 20px 20px 0 20px;
-    right: -100px;
-    top: -305px;
+        background: ghostwhite;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
 
-    background: #ededed;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
+        transform-origin: 0% 0%;
+        transform: translate(100%, 0);
 
-    transform-origin: 0% 0%;
-    transform: translate(100%, 0);
-
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        /*        display: none;*/
+    }
 
 
 
@@ -328,7 +419,7 @@ a:hover {
     }
 
     #splash {
-        background-image: url(assets/niki_splash_gradient.png);
+        background-image: url(assets/Niki-17-2.jpg);
         position: absolute;
         background-size: 100%;
         width: 400px;
@@ -340,7 +431,7 @@ a:hover {
     }
 
     #splash:hover {
-        background-image: url(assets/niki_splash_farve.jpg);
+        background-image: url(assets/Niki-17-2_farve.jpg);
         position: absolute;
         background-size: 100%;
         width: 400px;
@@ -348,14 +439,14 @@ a:hover {
         top: 9vw;
         left: 55vw;
         background-repeat: no-repeat;
-        animation: pulse 0.2s infinite;
+        animation: scale 0.2s infinite;
         animation-timing-function: linear;
         animation-iteration-count: 1;
         animation-fill-mode: both;
 
     }
 
-    @keyframes pulse {
+    @keyframes scale {
         0% {
             transform: scale(1);
         }
@@ -408,4 +499,23 @@ a:hover {
         font-size: 2rem;
         position: absolute;
     }
+
+
+
+    /***** ABOUT ME *****/
+
+    #om_mig {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+
+    }
+
+    #box {
+        grid-column: 2/3;
+        position: relative;
+
+    }
+
+
 }

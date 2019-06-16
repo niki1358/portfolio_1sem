@@ -15,36 +15,20 @@
 
 <body>
     <header>
-        <nav role='navigation'>
-            <!-- Bruges til user agents (software) der ikke supporterer HTML5, så de forstår strukturen bedre -->
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <!-- Bruges som click receiver, så jeg kan bruge :checked selector på den i min CSS -->
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-                <ul id="menu">
-                    <a href="index.html#landingpage">
-                        <li>Forside</li>
-                    </a>
-                    <a href="index.html#om_mig">
-                        <li>Om mig</li>
-                    </a>
-                    <a href="index.html#web">
-                        <li>Web</li>
-                    </a>
-                    <a href="index.html#animation">
-                        <li>Animation</li>
-                    </a>
-                    <a href="index.html#indhold">
-                        <li>Indhold</li>
-                    </a>
-                    <a href="index.html#ux">
-                        <li>UX</li>
-                    </a>
-                </ul>
+        <div id="burger_knap">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="menu" class="toggle_menu">
+            <div class="menu_links">
+                <a id="forside_link" href="index.html#landingpage">FORSIDE</a>
+                <a id="om_mig_link" href="index.html#om_mig">OM MIG</a>
+                <a id="web_link" href="index.html#web">WEB</a>
+                <a id="animation_link" href="index.html#animation">ANIMATION</a>
+                <a id="indhold_link" href="index.html#indhold">INDHOLD</a>
+                <a id="ux_link" href="index.html#ux">UX</a>
             </div>
         </nav>
     </header>
@@ -54,6 +38,7 @@
         <h1 id="hausen_mobile">HAUSEN</h1>
         <h1 id="niki_desktop">NIKI</h1>
         <h1 id="wacherhausen_desktop">WACHERHAUSEN</h1>
+        <h2 id="multimediedesign_splash">MULTIMEDIEDESIGN 1.SEM</h2>
         <h2 id="portfolio_splash">PORTFOLIO</h2>
         <section id="splash" class="scale_splash">
         </section>
@@ -88,35 +73,36 @@
     </section>
     <section id="portfolio">
         <h2 id="web">GRUNDLÆGGENDE WEB</h2>
-        <section class="sectionwrapper_portfolio">
+        <section class="sectionwrapper_web">
             <figure id="web_screenshot">
                 <img class="screenshots" src="assets/stilartsite_screenshot.png" alt="billede af stilartsite">
             </figure>
             <p>I tema X har vi lært om forskellige layoutprincipper (viden), jeg valgte at bruge X-princip til at løse den efterfølgende opgave på følgende måde (færdighed), jeg valgte at anvende X løsning fremfor en anden fordi... (kompetence).</p>
         </section>
         <h2 id="animation">GRUNDLÆGGENDE ANIMATION</h2>
-        <section class="sectionwrapper_portfolio">
+        <section class="sectionwrapper_animation">
             <figure id="animation_screenshot">
                 <img class="screenshots" src="assets/spil_screenshot.png" alt="billede af spil">
             </figure>
             <p>I tema X har vi lært om forskellige layoutprincipper (viden), jeg valgte at bruge X-princip til at løse den efterfølgende opgave på følgende måde (færdighed), jeg valgte at anvende X løsning fremfor en anden fordi... (kompetence).</p>
         </section>
         <h2 id="indhold">GRUNDLÆGGENDE INDHOLD</h2>
-        <section class="sectionwrapper_portfolio">
+        <section class="sectionwrapper_indhold">
             <figure id="indhold_screenshot">
                 <img class="screenshots" src="assets/redesign_screenshot.png" alt="billede af redesign">
             </figure>
             <p>I tema X har vi lært om forskellige layoutprincipper (viden), jeg valgte at bruge X-princip til at løse den efterfølgende opgave på følgende måde (færdighed), jeg valgte at anvende X løsning fremfor en anden fordi... (kompetence).</p>
         </section>
         <h2 id="ux">GRUNDLÆGGENDE UX</h2>
-        <section class="sectionwrapper_portfolio">
+        <section class="sectionwrapper_ux">
             <figure id="ux_screenshot">
                 <img class="screenshots" src="assets/native_app_screenshot.jpg" alt="billede af app prototype">
             </figure>
             <p>I tema X har vi lært om forskellige layoutprincipper (viden), jeg valgte at bruge X-princip til at løse den efterfølgende opgave på følgende måde (færdighed), jeg valgte at anvende X løsning fremfor en anden fordi... (kompetence).</p>
         </section>
     </section>
+    <button onclick="topFunction()" id="opKnap" title="Go to top">
+        <p><i class="arrow up"></i></p>
+    </button>
     <script src="script.js"></script>
-</body>
-
-</html>
+</body></html>

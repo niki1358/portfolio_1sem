@@ -39,9 +39,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-        document.getElementById("opKnap").style.display = "block";
+        document.querySelector("#opKnap").style.display = "block";
     } else {
-        document.getElementById("opKnap").style.display = "none";
+        document.querySelector("#opKnap").style.display = "none";
     }
 }
 

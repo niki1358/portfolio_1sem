@@ -30,7 +30,7 @@ body {
 
 p {
     color: white;
-    font-size: 15px;
+    font-size: 1.6rem;
     padding: 15px 15px 15px 15px;
     text-align: justify;
     font-family: 'Quicksand', sans-serif;
@@ -219,6 +219,10 @@ nav {
     position: absolute;
 }
 
+#multimediedesign_splash {
+    visibility: hidden;
+    position: absolute;
+}
 
 /****************************** ABOUT ME ******************************/
 
@@ -322,11 +326,72 @@ ul {
     color: #242941;
 }
 
-/****************************** PORTFOILIO SIDER ******************************/
+/****************************** PORTFOLIO SIDER ******************************/
 
 .screenshots {
     width: 100%;
     padding: 10px;
+    cursor: pointer;
+}
+
+figcaption {
+    color: white;
+    font-size: 15px;
+    padding: 1px 15px 15px 15px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.knap_wrap {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+
+}
+
+.knap_hyperlink {
+    color: #242941;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition: 0.5s;
+    background-color: ghostwhite;
+    border: 2px solid #242941;
+    line-height: 1;
+    padding: 15px 32px;
+}
+
+.knap_hyperlink:hover {
+    animation: scale_knap 0.2s infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes scale_knap {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.03);
+    }
+}
+
+footer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 
@@ -334,6 +399,10 @@ ul {
 
     p {
         font-size: 16px;
+    }
+
+    a {
+        text-decoration: none;
     }
 
     /****************************** NAV ******************************/
@@ -351,7 +420,7 @@ ul {
 
     nav {
         width: 100vw;
-        height: 100px;
+        height: 60px;
         background-color: #1D2B3B;
         box-shadow: 0 0px 0px 0px #696969;
         position: absolute;
@@ -533,6 +602,35 @@ ul {
 
     /****************************** ABOUT ME ******************************/
 
+    .screenshots {
+        display: block;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .screenshots:hover {
+        width: 80%;
+        padding: 10px;
+        cursor: pointer;
+        animation: screenshot_scale 0.2s infinite;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+
+    }
+
+    @keyframes screenshot_scale {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(1.01);
+        }
+    }
+
     #om_mig {
         width: 100vw;
         height: 50vw;
@@ -557,30 +655,25 @@ ul {
     /***** PORTFOLIO *****/
 
 
-    .sectionwrapper_web {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-
-    }
-
-    .sectionwrapper_animation {
+    .sectionwrapper_portfolio {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
     }
 
-    .sectionwrapper_indhold {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
+    #web_screenshot {
+        align-self: center;
     }
 
-    .sectionwrapper_ux {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
+    .paragraph_reverse {
+        grid-column: 1/2;
+        grid-row: 1/2;
     }
+
+
+
+
+
 
 
 }

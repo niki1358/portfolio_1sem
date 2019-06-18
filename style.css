@@ -36,6 +36,23 @@ p {
     font-family: 'Quicksand', sans-serif;
 }
 
+ul {
+    color: #1D2B3B;
+    font-size: 1.6rem;
+    padding: 15px 15px 15px 15px;
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+}
+
+li {
+    color: #1D2B3B;
+    font-size: 1.6rem;
+    padding: 15px 15px 15px 15px;
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+}
+
 h2 {
     font-family: 'Open Sans Condensed', sans-serif;
     color: ghostwhite;
@@ -102,6 +119,7 @@ nav {
 }
 
 #burger_knap {
+    background-image: url(assets/hvid_cirkel.svg);
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -119,7 +137,7 @@ nav {
     position: absolute;
     height: 8px;
     width: 50px;
-    background-color: ghostwhite;
+    background-color: #1D2B3B;
     border-radius: 2px;
     opacity: 1;
     left: 0;
@@ -250,12 +268,15 @@ ul {
 
 }
 
+/*********** FOLD UD BOKS *******/
+
 #box {
     background-color: rgb(248, 248, 255);
     padding: 15px 10px 20px;
     position: relative;
     width: 350px;
     margin: 10px;
+
 }
 
 #box.lille {
@@ -265,6 +286,7 @@ ul {
 }
 
 #box.stor {
+    overflow: hidden;
     max-height: 3000px;
     transition: max-height 1s ease-in;
 }
@@ -287,13 +309,15 @@ ul {
 
     /* Selve plussets farve og størrelse, samt baggrund */
     color: red;
+    font-size: 1.5rem;
     font-weight: 800;
     width: 20px;
     height: 20px;
-    background: white;
+    background: ghostwhite;
+
 }
 
-.gult_overlay {
+.hvidt_overlay {
     /* For at få gradient-baggrunden til at fylde */
     height: 60px;
     margin: 0;
@@ -310,6 +334,7 @@ ul {
 
     /* For at placere plusset i midten */
     text-align: center;
+
 }
 
 #box p {
@@ -363,7 +388,7 @@ figcaption {
 
     transition: 0.5s;
     background-color: ghostwhite;
-    border: 2px solid #242941;
+
     line-height: 1;
     padding: 15px 32px;
 }
@@ -415,7 +440,7 @@ footer {
         top: 0;
         right: 0;
         width: 100vw;
-        height: 100vw;
+        height: 100px;
     }
 
     nav {
@@ -477,8 +502,9 @@ footer {
         background-color: ghostwhite;
         color: #1D2B3B;
         cursor: pointer;
-        padding: 1px;
+        padding: 14px;
         border-radius: 4px;
+
     }
 
     #myBtn:hover {
@@ -633,10 +659,10 @@ footer {
 
     #om_mig {
         width: 100vw;
-        height: 50vw;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
+        margin: 0 0 120px 0;
 
     }
 
